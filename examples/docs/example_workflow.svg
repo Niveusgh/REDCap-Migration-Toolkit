@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa" />
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#333333">REDCap Data Migration Workflow</text>
+  
+  <!-- Step 1: Source Data Analysis -->
+  <rect x="50" y="80" width="180" height="80" rx="10" ry="10" fill="#e3f2fd" stroke="#1976d2" stroke-width="2" />
+  <text x="140" y="115" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#1976d2">Source Data Analysis</text>
+  <text x="140" y="140" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#1976d2">Identify structure and content</text>
+  
+  <!-- Step 2: Mapping Definition -->
+  <rect x="310" y="80" width="180" height="80" rx="10" ry="10" fill="#e8f5e9" stroke="#2e7d32" stroke-width="2" />
+  <text x="400" y="115" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2e7d32">Mapping Definition</text>
+  <text x="400" y="140" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#2e7d32">Create field mappings</text>
+  
+  <!-- Step 3: Data Validation -->
+  <rect x="570" y="80" width="180" height="80" rx="10" ry="10" fill="#fff8e1" stroke="#ff8f00" stroke-width="2" />
+  <text x="660" y="115" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#ff8f00">Data Validation</text>
+  <text x="660" y="140" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#ff8f00">Check for issues</text>
+  
+  <!-- Step 4: PHI Security -->
+  <rect x="50" y="220" width="180" height="80" rx="10" ry="10" fill="#fce4ec" stroke="#c2185b" stroke-width="2" />
+  <text x="140" y="255" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#c2185b">PHI Security</text>
+  <text x="140" y="280" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#c2185b">Secure sensitive data</text>
+  
+  <!-- Step 5: Data Transformation -->
+  <rect x="310" y="220" width="180" height="80" rx="10" ry="10" fill="#e0f7fa" stroke="#0097a7" stroke-width="2" />
+  <text x="400" y="255" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#0097a7">Data Transformation</text>
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#0097a7">Convert to REDCap format</text>
+  
+  <!-- Step 6: Test Migration -->
+  <rect x="570" y="220" width="180" height="80" rx="10" ry="10" fill="#f3e5f5" stroke="#7b1fa2" stroke-width="2" />
+  <text x="660" y="255" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#7b1fa2">Test Migration</text>
+  <text x="660" y="280" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#7b1fa2">Verify with sample data</text>
+  
+  <!-- Step 7: Full Migration -->
+  <rect x="310" y="360" width="180" height="80" rx="10" ry="10" fill="#ffebee" stroke="#c62828" stroke-width="2" />
+  <text x="400" y="395" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#c62828">Full Migration</text>
+  <text x="400" y="420" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#c62828">Execute complete transfer</text>
+  
+  <!-- Step 8: Verification -->
+  <rect x="310" y="500" width="180" height="80" rx="10" ry="10" fill="#ede7f6" stroke="#4527a0" stroke-width="2" />
+  <text x="400" y="535" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#4527a0">Verification</text>
+  <text x="400" y="560" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#4527a0">Confirm data integrity</text>
+  
+  <!-- Arrows -->
+  <!-- Horizontal arrows top row -->
+  <path d="M230 120 L310 120" stroke="#666666" stroke-width="2" fill="none" />
+  <polygon points="300,115 310,120 300,125" fill="#666666" />
+  
+  <path d="M490 120 L570 120" stroke="#666666" stroke-width="2" fill="none" />
+  <polygon points="560,115 570,120 560,125" fill="#666666" />
+  
+  <!-- Vertical arrow from validation to security -->
+  <path d="M660 160 L660 180 L140 180 L140 220" stroke="#666666" stroke-width="2" fill="none" />
+  <polygon points="135,210 140,220 145,210" fill="#666666" />
+  
+  <!-- Horizontal arrows middle row -->
+  <path d="M230 260 L310 260" stroke="#666666" stroke-width="2" fill="none" />
+  <polygon points="300,255 310,260 300,265" fill="#666666" />
+  
+  <path d="M490 260 L570 260" stroke="#666666" stroke-width="2" fill="none" />
+  <polygon points="560,255 570,260 560,265" fill="#666666" />
+  
+  <!-- Vertical arrow from test to full migration -->
+  <path d="M660 300 L660 320 L400 320 L400 360" stroke="#666666" stroke-width="2" fill="none" />
+  <polygon points="395,350 400,360 405,350" fill="#666666" />
+  
+  <!-- Vertical arrow from full migration to verification -->
+  <path d="M400 440 L400 500" stroke="#666666" stroke-width="2" fill="none" />
+  <polygon points="395,490 400,500 405,490" fill="#666666" />
+  
+  <!-- Legend -->
+  <rect x="600" y="500" width="150" height="80" rx="5" ry="5" fill="white" stroke="#cccccc" stroke-width="1" />
+  <text x="675" y="520" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#333333">Legend</text>
+  
+  <rect x="615" y="535" width="15" height="15" fill="#e3f2fd" stroke="#1976d2" stroke-width="1" />
+  <text x="675" y="547" font-family="Arial, sans-serif" font-size="12" fill="#333333">Preparation</text>
+  
+  <rect x="615" y="560" width="15" height="15" fill="#ffebee" stroke="#c62828" stroke-width="1" />
+  <text x="675" y="572" font-family="Arial, sans-serif" font-size="12" fill="#333333">Execution</text>
+</svg>
