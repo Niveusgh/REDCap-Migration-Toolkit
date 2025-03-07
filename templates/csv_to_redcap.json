@@ -1,0 +1,94 @@
+{
+    "source_type": "csv",
+    "record_id_field": "participant_id",
+    "fields": [
+      {
+        "source_field": "participant_id",
+        "target_field": "record_id",
+        "field_type": "text"
+      },
+      {
+        "source_field": "enrollment_date",
+        "target_field": "enrollment_date",
+        "field_type": "date",
+        "date_format": "%m/%d/%Y"
+      },
+      {
+        "source_field": "first_name",
+        "target_field": "first_name",
+        "field_type": "text"
+      },
+      {
+        "source_field": "last_name",
+        "target_field": "last_name",
+        "field_type": "text"
+      },
+      {
+        "source_field": "dob",
+        "target_field": "birth_date",
+        "field_type": "date",
+        "date_format": "%Y-%m-%d"
+      },
+      {
+        "source_field": "gender",
+        "target_field": "gender",
+        "field_type": "radio",
+        "options": {
+          "1": "Male",
+          "2": "Female",
+          "3": "Other",
+          "4": "Prefer not to say"
+        }
+      },
+      {
+        "source_field": "health_conditions",
+        "target_field": "health_conditions",
+        "field_type": "checkbox",
+        "options": {
+          "1": "Diabetes",
+          "2": "Hypertension",
+          "3": "Asthma",
+          "4": "Heart Disease",
+          "5": "Cancer",
+          "6": "Other"
+        }
+      },
+      {
+        "source_field": "assessment_score",
+        "target_field": "assessment_score",
+        "field_type": "text"
+      },
+      {
+        "source_field": "visit_complete",
+        "target_field": "visit_complete",
+        "field_type": "radio",
+        "options": {
+          "0": "Incomplete",
+          "1": "Unverified",
+          "2": "Complete"
+        }
+      },
+      {
+        "source_field": "age",
+        "target_field": "calculated_age",
+        "field_type": "calculated",
+        "formula": "2025 - int({dob}.split('-')[0])"
+      }
+    ],
+    "validation_rules": {
+      "required_fields": ["record_id", "enrollment_date", "first_name", "last_name"],
+      "date_range": {
+        "enrollment_date": {"min": "2010-01-01", "max": "2025-12-31"},
+        "birth_date": {"min": "1900-01-01", "max": "2025-12-31"}
+      },
+      "numeric_range": {
+        "assessment_score": {"min": 0, "max": 100}
+      }
+    },
+    "phi_fields": ["first_name", "last_name", "birth_date"],
+    "migration_settings": {
+      "batch_size": 100,
+      "import_format": "json",
+      "overwrite_behavior": "overwrite"
+    }
+  }
